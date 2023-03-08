@@ -17,28 +17,69 @@
   <body>
     <section class="section-contents-info">
       <h1 class="sr-only">영상 컨텐츠 정보</h1>
-      <img src="" alt="대표 영상 이미지" />
-      <div>
-        <dl class="list-contents-info">
-          <dt class="genre">컨텐츠 장르</dt>
-          <dd class="txt-genre">드라마</dd>
-          <dt class="age-of-viewers">컨텐츠 이용가</dt>
-          <dd class="txt-age-of-viewers">전체이용가</dd>
-          <dt class="title">컨텐츠 제목</dt>
-          <dd class="txt-title">파이썬 부트캠프</dd>
-        </dl>
-        <div>
-          <img
-            class="img-thumbsup"
-            src=""
-            alt="호감을 뜻하는 엄지를 드는 이미지"
-          />
-          <img class="img-heart" src="" alt="하트 이미지" />
-          <p class="txt-star-avg">
-            별점 평균<span class="value-star-avg">평균 값</span>
-          </p>
-          <img class="img-star-rating" src="" alt="별점 이미지" />
-          <button class="btn-cancle-rating">별점 취소 버튼</button>
+      <div class="wrapper-contents">
+        <img
+          class="img-contents"
+          src="./src/images/포스터_부트캠프.jpg"
+          alt="대표 영상 이미지"
+        />
+        <div class="wrapper-specific-contents-info">
+          <dl class="list-contents-info">
+            <dt class="sr-only" class="genre">컨텐츠 장르</dt>
+            <dd class="txt-genre">드라마</dd>
+            <dt class="sr-only" class="age-of-viewers">컨텐츠 이용가</dt>
+            <dd class="txt-age-of-viewers">전체이용가</dd>
+            <dt class="sr-only" class="title">컨텐츠 제목</dt>
+            <dd class="txt-title">파이썬 부트캠프</dd>
+          </dl>
+          <section class="section-rating">
+            <h2 class="sr-only">컨텐츠 평가 섹션</h2>
+            <button class="btn-thumbs-up">
+              <img
+                class="img-thumbs-up"
+                src="./src/images/아이콘_thumbs-up.png"
+                alt="호감을 뜻하는 엄지를 드는 이미지"
+              />
+            </button>
+            <button class="btn-heart">
+              <img
+                class="img-heart"
+                src="./src/images/아이콘_heart.png"
+                alt="하트 이미지"
+              />
+            </button>
+            <p class="txt-star-avg">
+              별점 평균<span class="value-star-avg"> 4.5</span>
+            </p>
+            <img
+              class="img-star-rating"
+              src="./src/images/아이콘_별_1.png"
+              alt="별점 이미지"
+            />
+            <img
+              class="img-star-rating"
+              src="./src/images/아이콘_별_1.png"
+              alt="별점 이미지"
+            />
+            <img
+              class="img-star-rating"
+              src="./src/images/아이콘_별_1.png"
+              alt="별점 이미지"
+            />
+            <img
+              class="img-star-rating"
+              src="./src/images/아이콘_별_2.png"
+              alt="별점 이미지"
+            />
+            <img
+              class="img-star-rating"
+              src="./src/images/아이콘_별_3.png"
+              alt="별점 이미지"
+            />
+            <div class="btn-cancle-rating">
+              <img src="./src/images/x-circle.png" alt="취소를 의미하는 엑스" />
+            </div>
+          </section>
         </div>
       </div>
     </section>

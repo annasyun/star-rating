@@ -15,3 +15,104 @@
   height: 1px;
   overflow: hidden;
 }
+
+/* 컨텐츠 섹션 */
+.section-contents-info {
+  position: absolute;
+  width: 608px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #333333;
+  border-radius: 15px;
+}
+
+.wrapper-contents {
+  position: absolute;
+  display: flex;
+  left: -64px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 49px;
+}
+
+.img-contents {
+  width: 281px;
+  height: 396px;
+  border-radius: 10px;
+}
+
+.wrapper-specific-contents-info {
+  display: flex;
+  flex-direction: column;
+  gap: 114px;
+}
+
+.txt-genre,
+.txt-age-of-viewers {
+  display: inline-block;
+  color: #bdbdbd;
+  font-size: 16px;
+  margin-bottom: 13px;
+}
+
+.txt-genre::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 13px;
+  margin: 0 4px 0 10px;
+  background-color: #bdbdbd;
+  vertical-align: top;
+}
+
+.txt-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.btn-thumbs-up,
+.btn-heart {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-thumbs-up {
+  margin-right: 20px;
+  margin-bottom: 22px;
+}
+
+.img-thumbs-up,
+.img-heart {
+  width: 29px;
+}
+
+.txt-star-avg {
+  font-size: 16px;
+  line-height: 23px;
+  color: #f2f2f2;
+  margin-bottom: 16px;
+}
+
+.img-star-rating {
+  width: 51px;
+}
+
+.btn-cancle-rating {
+  float: right;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  margin-left: 11px;
+}
+
+.btn-cancle-rating img {
+  position: absolute;
+  top: 60%;
+}

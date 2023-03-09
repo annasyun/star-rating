@@ -4,84 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>star-rating</title>
-    <link rel="stylesheet" href="./src/styles/reset.css" />
-    <link rel="stylesheet" href="./src/styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/src/style/reset.css" />
+    <link rel="stylesheet" href="/src/style/app.css" />
+    <title>영화 별점 평가하기</title>
   </head>
+
   <body>
-    <section class="section-contents-info">
-      <h1 class="sr-only">영상 컨텐츠 정보</h1>
-      <div class="wrapper-contents">
-        <img
-          class="img-contents"
-          src="./src/images/포스터_부트캠프.jpg"
-          alt="대표 영상 이미지"
-        />
-        <div class="wrapper-specific-contents-info">
-          <dl class="list-contents-info">
-            <dt class="sr-only" class="genre">컨텐츠 장르</dt>
-            <dd class="txt-genre">드라마</dd>
-            <dt class="sr-only" class="age-of-viewers">컨텐츠 이용가</dt>
-            <dd class="txt-age-of-viewers">전체이용가</dd>
-            <dt class="sr-only" class="title">컨텐츠 제목</dt>
-            <dd class="txt-title">파이썬 부트캠프</dd>
-          </dl>
-          <section class="section-rating">
-            <h2 class="sr-only">컨텐츠 평가 섹션</h2>
-            <button class="btn-thumbs-up">
-              <img
-                class="img-thumbs-up"
-                src="./src/images/아이콘_thumbs-up.png"
-                alt="호감을 뜻하는 엄지를 드는 이미지"
-              />
-            </button>
-            <button class="btn-heart">
-              <img
-                class="img-heart"
-                src="./src/images/아이콘_heart.png"
-                alt="하트 이미지"
-              />
-            </button>
-            <p class="txt-star-avg">
-              별점 평균<span class="value-star-avg"> 4.5</span>
-            </p>
-            <img
-              class="img-star-rating"
-              src="./src/images/아이콘_별_1.png"
-              alt="별점 이미지"
+    <div id="app">
+      <div class="movie-container">
+        <section class="movie">
+          <div class="poster-container">
+            <img src="./src/assets/images/poster_bootcamp.png alt="영화 포스터"
             />
-            <img
-              class="img-star-rating"
-              src="./src/images/아이콘_별_1.png"
-              alt="별점 이미지"
-            />
-            <img
-              class="img-star-rating"
-              src="./src/images/아이콘_별_1.png"
-              alt="별점 이미지"
-            />
-            <img
-              class="img-star-rating"
-              src="./src/images/아이콘_별_2.png"
-              alt="별점 이미지"
-            />
-            <img
-              class="img-star-rating"
-              src="./src/images/아이콘_별_3.png"
-              alt="별점 이미지"
-            />
-            <div class="btn-cancle-rating">
-              <img src="./src/images/x-circle.png" alt="취소를 의미하는 엑스" />
+          </div>
+          <div class="content">
+            <div class="content-type">
+              <span>드라마</span>
+              <span>전체이용가</span>
             </div>
-          </section>
-        </div>
+            <h3 class="content-title">파이썬 부트캠프</h3>
+            <div class="content-favorite">
+              <button class="button-recommend">
+                <i class="icon-thumbs-up"></i>
+              </button>
+              <button class="button-heart">
+                <i class="icon-heart"></i>
+              </button>
+            </div>
+            <div class="content-star">
+              <em class="star-average">별점 평균 4.5</em>
+              <div class="star-point-container">
+                <div class="star-background">
+                  <img
+                    src="./src/images/icon_empty_star.png"
+                    data-point="1"
+                    title="별로에요.."
+                    alt="1"
+                  />
+                  <img
+                    src="./src/images/icon_empty_star.png"
+                    data-point="2"
+                    title="그저 그래요"
+                    alt="2"
+                  />
+                  <img
+                    src="./src/images/icon_empty_star.png"
+                    data-point="3"
+                    title="괜찮아요"
+                    alt="3"
+                  />
+                  <img
+                    src="./src/images/icon_empty_star.png"
+                    data-point="4"
+                    title="좋아요!"
+                    alt="4"
+                  />
+                  <img
+                    src="./src/images/icon_empty_star.png"
+                    data-point="5"
+                    title="완전 강추!!"
+                    alt="5"
+                  />
+                </div>
+                <button class="icon-remove-star">
+                  <img
+                    src="./src/images/icon_remove_star.png"
+                    alt="별점 제거"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
+    <!-- type="module" : 스크립트를 모듈로 사용할것임을 선언합니다. -->
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>

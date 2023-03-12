@@ -16,22 +16,33 @@ class StarPoint {
   }
 
   setup() {
-    this.bindEvent();
+    this.bindEvents();
   }
 
   lockStarPoint() {
-    this.lockStarPoint = true;
+    this.lockedStarPoint = true;
   }
 
   unlockStarPoint() {
-    this.lockStarPoint = false;
+    this.lockedStarPoint = false;
   }
 
   isLockedStarPoint() {
-    return this.lockStarPoint;
+    return this.lockedStarPoint;
   }
 
-  bindEvent() {
+  bindEvents() {
+    this.starBackgroundElement.addEventListener("mouseover", (event) => {
+      if (this.isLockedStarPoint()) {
+        return;
+      }
+      const { target, offsetX: currentUserPoint } = event;
+      const { point } = target.dataset;
+      const StarPointIndex = parseInt(point, 10) - 1;
+      const [starimageClientRect] = target.getClientRects();
+      const starImageWidth = starimageClientRect.width;
+      const isOverHalf = starImageWidth / 2 < currentUserPoint;
+    });
     console.log("hello starpoint");
   }
 }

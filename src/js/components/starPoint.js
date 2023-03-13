@@ -42,8 +42,45 @@ class StarPoint {
       const [starimageClientRect] = target.getClientRects();
       const starImageWidth = starimageClientRect.width;
       const isOverHalf = starImageWidth / 2 < currentUserPoint;
+
+      this.renderStarPointImages({
+        drawbleLimitIndex: StarPointIndex,
+        isOverHalf,
+      });
     });
-    console.log("hello starpoint");
+    this.starBackgroundElement.addEventListener("click", () =>
+      this.lockStarPoint()
+    );
+    this.starPointResetButton.addEventListener("click", () => {
+      this.unlockStarPoint();
+      this.renderStarPointImages();
+    });
+
+    this.starBackgroundElement.addEventListener("mouseout", () => {
+      !this.isLockedStarPoint() && this.resetStarPointImages();
+    });
+  }
+
+  renderStarPointImages(payload = {}) {
+    const { drawbleLimitIndex = -1, isOverHalf = false } = payload;
+    Array.prototype.forEach.call(this.starimages, (starimage, index) => {
+      let imageSource =
+        index < drawbleLimitIndex
+          ? starImageSourceMap.full
+          : starImageSourceMap.empty;
+
+      if (drawbleLimitIndex === index) {
+        imageSource = isOverHalf
+          ? starImageSourceMap.full
+          : starImageSourceMap.half;
+      }
+
+      starimage.src = imageSource;
+    });
+  }
+
+  resetStarPointImages() {
+    this.renderStarPointImages();
   }
 }
 
